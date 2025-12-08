@@ -1,11 +1,11 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet } from "react-router-dom";
+import Navbar from "./main_component/Navbar";
 
 export default function MainLayout() {
-     return (
-          <div>
-               MainLayout
-               <Outlet/>
-          </div>
-     )
+  return (
+    <div>
+      <Navbar />
+      <Outlet />
+    </div>
+  );
 }

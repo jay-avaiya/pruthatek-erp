@@ -1,36 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
 /* STATIC FONTS */
 @font-face {
-     font-family: 'Inter';
-     src: url('/fonts/Inter.ttf') format('truetype');
+  font-family: "Inter";
+  src: url("/fonts/Inter.ttf") format("truetype");
 }
 
 @font-face {
-     font-family: 'Roboto';
-     src: url('/fonts/Roboto.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("/fonts/Roboto.ttf") format("truetype");
 }
 
 @font-face {
-     font-family: 'Manrope';
-     src: url('/fonts/Manrope.ttf') format('truetype');
+  font-family: "Manrope";
+  src: url("/fonts/Manrope.ttf") format("truetype");
 }
-
-
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-
 @theme {
-
-     --color-primary: #F7F7F7;
-     --color-secondary: #000000;
-     --color-accent: #EAE4D5;
-
-     
-
-     --font-manrope: 'Manrope', sans-serif;
-     --font-roboto: 'Roboto', sans-serif;
-     --font-inter: 'Inter', sans-serif;
-
+  --font-inter: "Inter", sans-serif;
 }
