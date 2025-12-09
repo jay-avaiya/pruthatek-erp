@@ -26,7 +26,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="w-full h-[80vh] font-inter px-24">
+    <div className="w-full h-fit font-inter px-24">
       <h1 className="font-semibold text-[#333] text-[40px]">Pruthatek Blogs</h1>
 
       <div className="flex justify-between mt-24">
