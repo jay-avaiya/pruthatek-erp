@@ -108,7 +108,7 @@ export default function Footer() {
         {/* Hospital */}
         <div>
           <p className="text-2xl font-semibold">For Hosptials</p>
-          <ul className="flex flex-col gap-y-3 mt-4 leading-[26px] leading-[26px]">
+          <ul className="flex flex-col gap-y-3 mt-4 leading-[26px]">
             {hospital.map((item, index) => (
               <Link to={item.link} key={index}>
                 <li className="text-[16px]">{item.name}</li>
