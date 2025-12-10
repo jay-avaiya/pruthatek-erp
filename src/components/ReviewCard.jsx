@@ -2,14 +2,18 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
-const ReviewCard = () => {
+const ReviewCard = ({ bg }) => {
   return (
     <div className="w-full max-w-[297px] min-h-[327px] px-1 py-2 border-8 border-white rounded-[12px] shadow-[0_6px_18px_-4px_rgba(0,0,0,0.15)] flex flex-col gap-4">
       {/* ---- user name ---- */}
       <div className="flex gap-2 items-center">
-        <div className="flex items-center justify-center text-center w-11 h-11 rounded-full bg-[#50B7FF] text-white">
+        <div
+          style={{ backgroundColor: bg || "#50B7FF" }}
+          className="flex items-center justify-center text-center w-11 h-11 rounded-full text-white"
+        >
           <span className="text-xl font-medium">Y</span>
         </div>
+
         <div className="flex flex-col">
           <p className="text-[17px] font-bold text-[#282D30]">Yash Gupta</p>
           <span className="text-xs text-[#A1A3B2]">2 Days ago</span>
