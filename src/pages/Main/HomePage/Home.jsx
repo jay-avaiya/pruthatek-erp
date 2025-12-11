@@ -140,7 +140,7 @@ const Home = () => {
           {needs.map((need, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 shadow-[0_6px_18px_-4px_rgba(0,0,0,0.15)] bg-amber-100 rounded-[10px] py-4 px-6"
+              className="flex items-center gap-2 shadow-[0_6px_18px_-4px_rgba(0,0,0,0.15)] rounded-[10px] py-4 px-6"
             >
               <IoCheckmarkCircle className="text-[#008060] size-5" />
               <span className="text-lg text-[#333333] font-semibold">
