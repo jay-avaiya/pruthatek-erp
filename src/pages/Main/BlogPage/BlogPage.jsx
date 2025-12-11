@@ -1,7 +1,12 @@
 import React from "react";
+import Blog from "../../../layouts/main_component/Blog";
 
 const BlogPage = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Blog />
+    </div>
+  );
 };
 
 export default BlogPage;
