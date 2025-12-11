@@ -4,7 +4,7 @@ import ReviewCard from "../../../components/ReviewCard";
 
 const Pricing = () => {
   return (
-    <div className="flex flex-col items-center gap-24">
+    <div className="flex flex-col items-center gap-28">
       <PlanPricing />
 
       <div className="w-full flex flex-col gap-y-14 px-24 font-inter">
