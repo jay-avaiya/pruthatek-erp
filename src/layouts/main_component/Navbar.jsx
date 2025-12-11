@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
   return (
     <div className="w-full h-fit bg-[#F9FAFB] font-inter">
       {/* Top Header */}
@@ -49,20 +53,58 @@ export default function Navbar() {
         {/* Menu */}
         <ul className="flex items-center gap-12">
           <Link to={"/"}>
-            <li className="text-[16px] font-medium tracking-[-2%]">Service</li>
+            <li
+              className={`text-[16px] font-medium tracking-[-2%] pb-2 border-b-2 ${
+                isActive("/")
+                  ? "text-[#F19623] border-[#F19623]"
+                  : "border-transparent hover:text-[#F19623]"
+              }`}
+            >
+              Service
+            </li>
           </Link>
+
           <Link to={"/plan-and-pricing"}>
-            <li className="text-[16px] font-medium tracking-[-2%]">
+            <li
+              className={` text-[16px] font-medium tracking-[-2%] pb-2 border-b-2 ${
+                isActive("/plan-and-pricing")
+                  ? "text-[#F19623] border-[#F19623]"
+                  : "border-transparent hover:text-[#F19623]"
+              }
+      `}
+            >
               Plans & Pricing
             </li>
           </Link>
+
           <Link to={"/resources"}>
-            <li className="text-[16px] font-medium tracking-[-2%]">
+            <li
+              className={`
+        text-[16px] font-medium tracking-[-2%] pb-2 border-b-2
+        ${
+          isActive("/resources")
+            ? "text-[#F19623] border-[#F19623]"
+            : "border-transparent hover:text-[#F19623]"
+        }
+      `}
+            >
               Resources
             </li>
           </Link>
+
           <Link to={"/blog"}>
-            <li className="text-[16px] font-medium tracking-[-2%]">Blogs</li>
+            <li
+              className={`
+        text-[16px] font-medium tracking-[-2%] pb-2 border-b-2
+        ${
+          isActive("/blog")
+            ? "text-[#F19623] border-[#F19623]"
+            : "border-transparent hover:text-[#F19623]"
+        }
+      `}
+            >
+              Blogs
+            </li>
           </Link>
         </ul>
 
