@@ -1,9 +1,10 @@
 import { SearchIcon } from "lucide-react";
-import React from "react";
+import { useEffect, useState } from "react";
 import SectionCard from "./_components/SectionCard";
 
 const Resource = () => {
-  const [active, setActive] = React.useState("invoicing");
+  const [active, setActive] = useState("invoicing");
+  const [query, setQuery] = useState("");
 
   const items = [
     { label: "Invoicing & Billing", id: "invoicing" },
@@ -14,7 +15,20 @@ const Resource = () => {
     { label: "Reports", id: "report" },
   ];
 
-  React.useEffect(() => {
+  const filtered = items.filter((item) =>
+    item.label.toLowerCase().includes(query.toLowerCase())
+  );
+
+  const handleSearch = () => {
+    if (filtered.length === 0) return alert("No results found for " + query);
+    const id = filtered[0].id;
+
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setActive(id);
+    setQuery("");
+  };
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -90,6 +104,9 @@ const Resource = () => {
             <input
               type="text"
               placeholder="Search here"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
               className="w-full max-w-[310px] border border-[#D1D5DB] rounded-[12px] bg-[#F9FAFB] py-3 px-4 placeholder:text-[#A5A5A580] text-[16px] outline-none"
             />
             <SearchIcon className="absolute right-3 top-1/2 -translate-y-1/2 text-[#D1D5DB]" />
