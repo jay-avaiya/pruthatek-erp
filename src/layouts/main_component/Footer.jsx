@@ -4,47 +4,19 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   const company = [
-    {
-      name: "About Pruthatek",
-      link: "/about-us",
-    },
-    {
-      name: "Contact Us",
-      link: "/contact-us",
-    },
-    {
-      name: "Careers",
-      link: "/careers",
-    },
+    { name: "About Pruthatek", link: "/about-us" },
+    { name: "Contact Us", link: "/contact-us" },
+    { name: "Careers", link: "/careers" },
   ];
 
-  const business = [
-    {
-      name: "Radiant CRM",
-      link: "/radiant-crm",
-    },
-  ];
+  const business = [{ name: "Radiant CRM", link: "/radiant-crm" }];
 
-  const seller = [
-    {
-      name: "TWB",
-      link: "/twb",
-    },
-  ];
+  const seller = [{ name: "TWB", link: "/twb" }];
 
   const hospital = [
-    {
-      name: "Pruthatek Medical IPD",
-      link: "/pruthatek-medical-ipd",
-    },
-    {
-      name: "Pruthatek Medical OPD",
-      link: "/pruthatek-medical-opd",
-    },
-    {
-      name: "Pruthatek Medical Billing",
-      link: "/pruthatek-medical-billing",
-    },
+    { name: "Pruthatek Medical IPD", link: "/pruthatek-medical-ipd" },
+    { name: "Pruthatek Medical OPD", link: "/pruthatek-medical-opd" },
+    { name: "Pruthatek Medical Billing", link: "/pruthatek-medical-billing" },
   ];
 
   const institution = [
@@ -65,14 +37,28 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full h-fit font-inter text-[#333333]">
-      <div className="grid grid-cols-[1fr_1fr_auto_1fr_1fr] gap-10 border-t border-b border-[#E4E4E4] pt-10 pb-14 px-24">
+    <footer className="w-full font-inter text-[#333]">
+      {/* ---------- TOP GRID SECTION ---------- */}
+      <div
+        className="
+          grid
+          grid-cols-1
+          sm:grid-cols-1
+          md:grid-cols-2
+          lg:grid-cols-3
+          xl:grid-cols-[1fr_1fr_auto_1fr_1fr]
+          gap-10
+          border-t border-b border-[#E4E4E4]
+          px-4 md:px-6 lg:px-12 xl:px-24
+          pt-10 pb-14
+        "
+      >
         {/* Company */}
         <div>
           <p className="text-2xl font-semibold">Company</p>
-          <ul className="flex flex-col gap-y-3 mt-4 leading-[26px]">
-            {company.map((item, index) => (
-              <Link to={item.link} key={index}>
+          <ul className="flex flex-col gap-3 mt-4">
+            {company.map((item, i) => (
+              <Link key={i} to={item.link}>
                 <li className="text-[16px]">{item.name}</li>
               </Link>
             ))}
@@ -82,9 +68,9 @@ export default function Footer() {
         {/* Business */}
         <div>
           <p className="text-2xl font-semibold">For Businesses</p>
-          <ul className="flex flex-col gap-y-3 mt-4 leading-[26px]">
-            {business.map((item, index) => (
-              <Link to={item.link} key={index}>
+          <ul className="flex flex-col gap-3 mt-4">
+            {business.map((item, i) => (
+              <Link key={i} to={item.link}>
                 <li className="text-[16px]">{item.name}</li>
               </Link>
             ))}
@@ -96,9 +82,9 @@ export default function Footer() {
           <p className="text-2xl font-semibold whitespace-nowrap">
             For E-commerce Sellers
           </p>
-          <ul className="flex flex-col gap-y-3 mt-4 leading-[26px]">
-            {seller.map((item, index) => (
-              <Link to={item.link} key={index}>
+          <ul className="flex flex-col gap-3 mt-4">
+            {seller.map((item, i) => (
+              <Link key={i} to={item.link}>
                 <li className="text-[16px]">{item.name}</li>
               </Link>
             ))}
@@ -107,10 +93,10 @@ export default function Footer() {
 
         {/* Hospital */}
         <div>
-          <p className="text-2xl font-semibold">For Hosptials</p>
-          <ul className="flex flex-col gap-y-3 mt-4 leading-[26px]">
-            {hospital.map((item, index) => (
-              <Link to={item.link} key={index}>
+          <p className="text-2xl font-semibold">For Hospitals</p>
+          <ul className="flex flex-col gap-3 mt-4">
+            {hospital.map((item, i) => (
+              <Link key={i} to={item.link}>
                 <li className="text-[16px]">{item.name}</li>
               </Link>
             ))}
@@ -120,9 +106,9 @@ export default function Footer() {
         {/* Institution */}
         <div>
           <p className="text-2xl font-semibold">For Institutions</p>
-          <ul className="flex flex-col gap-y-3 mt-4 leading-[26px]">
-            {institution.map((item, index) => (
-              <Link to={item.link} key={index}>
+          <ul className="flex flex-col gap-3 mt-4">
+            {institution.map((item, i) => (
+              <Link key={i} to={item.link}>
                 <li className="text-[16px]">{item.name}</li>
               </Link>
             ))}
@@ -130,28 +116,29 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="px-24 py-10 border-b border-[#E4E4E4]">
-        {/* TOP SECTION */}
-        <div className="w-full flex justify-between gap-6">
-          {/* logo */}
-          <div className="bg-[#333333] w-[300px] h-[120px] flex items-center justify-center rounded-[20px]">
-            <Link to={"/"}>
+      {/* ---------- MIDDLE SECTION ---------- */}
+      <div className="px-4 md:px-6 lg:px-12 xl:px-24 py-10 border-b border-[#E4E4E4]">
+        {/* LOGO + BOXES */}
+        <div className="flex flex-col lg:flex-row justify-between gap-10">
+          {/* Logo */}
+          <div className="bg-[#333] w-[300px] h-[100px] lg:h-[120px] rounded-[20px] flex items-center justify-center">
+            <Link to="/">
               <img
                 src="/Pruthatek.png"
                 alt="Pruthatek"
-                className="w-fit h-fit object-contain"
+                className="object-contain"
               />
             </Link>
           </div>
 
-          {/* Stacked BOXES */}
-          <div className="flex gap-10">
+          {/* Boxes */}
+          <div className="flex flex-col sm:flex-row gap-10">
             <div className="flex flex-col gap-4">
               <div className="bg-[#EBEBEB] w-[190px] h-[60px]"></div>
               <div className="bg-[#EBEBEB] w-[190px] h-[60px]"></div>
             </div>
 
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-6">
               <div className="bg-[#EBEBEB] w-[190px] h-[60px]"></div>
               <div className="bg-[#EBEBEB] w-[190px] h-[60px]"></div>
               <div className="bg-[#EBEBEB] w-[190px] h-[60px]"></div>
@@ -159,14 +146,24 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* MIDDlE SECTION */}
-        <div className="grid grid-cols-5 gap-16 mt-16 w-full">
+        <div
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            md:grid-cols-2
+            lg:grid-cols-3
+            xl:grid-cols-5
+            gap-16
+            mt-16
+          "
+        >
           {/* Company */}
           <div>
             <p className="text-2xl font-semibold">Company</p>
-            <ul className="flex flex-col gap-y-3 mt-4 leading-[26px]">
-              {company.map((item, index) => (
-                <Link to={item.link} key={index}>
+            <ul className="flex flex-col gap-3 mt-4">
+              {company.map((item, i) => (
+                <Link key={i} to={item.link}>
                   <li className="text-[16px]">{item.name}</li>
                 </Link>
               ))}
@@ -176,21 +173,21 @@ export default function Footer() {
           {/* Legal */}
           <div>
             <p className="text-2xl font-semibold">Legal</p>
-            <ul className="flex flex-col gap-y-3 mt-4 leading-[26px]">
-              {legal.map((item, index) => (
-                <Link to={item.link} key={index}>
+            <ul className="flex flex-col gap-3 mt-4">
+              {legal.map((item, i) => (
+                <Link key={i} to={item.link}>
                   <li className="text-[16px]">{item.name}</li>
                 </Link>
               ))}
             </ul>
           </div>
 
-          {/* cookies */}
+          {/* Cookies */}
           <div>
             <p className="text-2xl font-semibold">About Cookies</p>
-            <ul className="flex flex-col gap-y-3 mt-4 leading-[26px]">
-              {cookie.map((item, index) => (
-                <Link to={item.link} key={index}>
+            <ul className="flex flex-col gap-3 mt-4">
+              {cookie.map((item, i) => (
+                <Link key={i} to={item.link}>
                   <li className="text-[16px]">{item.name}</li>
                 </Link>
               ))}
@@ -199,9 +196,8 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-2xl font-semibold">Contact us</p>
-
-            <div className="flex flex-col gap-y-3 mt-4 leading-[26px]">
+            <p className="text-2xl font-semibold">Contact Us</p>
+            <div className="flex flex-col gap-3 mt-4">
               <a href="mailto:info@pruthatek.com" className="text-[16px]">
                 info@pruthatek.com
               </a>
@@ -214,27 +210,26 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* social */}
+          {/* Social */}
           <div>
             <p className="text-2xl font-semibold">Follow Us</p>
-
-            <div className="flex gap-x-5 mt-4 ">
-              <FaLinkedinIn className="size-6 text-[#333333]" />
-              <FaFacebookF className="size-6 text-[#333333]" />
-              <PiInstagramLogoFill className="size-6 text-[#333333]" />
+            <div className="flex gap-5 mt-4">
+              <FaLinkedinIn className="size-6 text-[#333]" />
+              <FaFacebookF className="size-6 text-[#333]" />
+              <PiInstagramLogoFill className="size-6 text-[#333]" />
             </div>
           </div>
         </div>
       </div>
 
-      {/* BOTTOM SECTION */}
-      <div className="flex flex-col items-center justify-center w-full mt-3">
-        <p className="text-sm">
-          @2025 PRUTHA TECHNOMARKET PVT. LTD. | PRUTHA TECHNOMARKET INC. All
+      {/* ---------- BOTTOM SECTION ---------- */}
+      <div className="flex flex-col items-center justify-center w-full mt-3 px-4 md:px-6 lg:px-12 xl:px-24">
+        <p className="text-sm text-center">
+          ©2025 PRUTHA TECHNOMARKET PVT. LTD. | PRUTHA TECHNOMARKET INC. All
           rights reserved.
         </p>
 
-        <p className="text-[#F19623] font-semibold text-2xl my-4">
+        <p className="text-[#F19623] font-semibold text-2xl my-4 text-center">
           Made with <span className="text-[#FF0000]">❤</span> by Vinit
         </p>
       </div>
