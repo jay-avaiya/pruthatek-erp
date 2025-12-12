@@ -6,3 +6,12 @@
 @theme {
   --font-inter: "Inter", sans-serif;
 }
+
+.blog-pagination .swiper-pagination-bullet {
+  background-color: #c7c7c7; /* inactive dot color */
+  opacity: 1;
+}
+
+.blog-pagination .swiper-pagination-bullet-active {
+  background-color: #008060; /* your active color */
+}

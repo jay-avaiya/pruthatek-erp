@@ -224,13 +224,9 @@ export default function Footer() {
 
       {/* ---------- BOTTOM SECTION ---------- */}
       <div className="flex flex-col items-center justify-center w-full mt-3 px-4 md:px-6 lg:px-12 xl:px-24">
-        <p className="text-sm text-center">
+        <p className="text-sm text-center my-4">
           ©2025 PRUTHA TECHNOMARKET PVT. LTD. | PRUTHA TECHNOMARKET INC. All
           rights reserved.
-        </p>
-
-        <p className="text-[#F19623] font-semibold text-2xl my-4 text-center">
-          Made with <span className="text-[#FF0000]">❤</span> by Vinit
         </p>
       </div>
     </footer>
