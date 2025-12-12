@@ -52,14 +52,14 @@ const Resource = () => {
   }, []);
 
   return (
-    <div className="flex justify-between px-24 font-inter">
+    <div className="flex flex-col md:flex-row md:justify-between px-4 md:px-6 lg:px-12 xl:px-24 font-inter">
       {/* side bar */}
-      <div className="flex flex-col gap-12 sticky top-10 h-fit">
-        <p className="text-[16px] text-[#F19623] font-semibold">
+      <div className="hidden md:flex flex-col gap-12 sticky top-10 h-fit">
+        <p className="text-sm md:text-[16px] text-[#F19623] font-semibold">
           Resources→Client Management
         </p>
 
-        <div className="w-full max-w-[310px] h-fit bg-[#F9FAFB] border border-[#D1D5DB] rounded-3xl px-3 py-3">
+        <div className=" w-full max-w-[280px] lg:max-w-[310px] h-fit bg-[#F9FAFB] border border-[#D1D5DB] rounded-3xl px-3 py-3">
           <ul className="space-y-3">
             {items.map((item) => (
               <li key={item.id}>
@@ -70,7 +70,7 @@ const Resource = () => {
                       .scrollIntoView({ behavior: "smooth" });
                     setActive(item.id);
                   }}
-                  className={`w-full text-left py-3 px-4 rounded-[10px] text-[16px] font-semibold flex items-center gap-4
+                  className={`w-full text-left py-3 px-4 rounded-[10px] text-sm lg:text-[16px] font-semibold flex items-center gap-4 group
                         ${
                           active === item.id
                             ? "bg-[#F19623] text-white"
@@ -79,7 +79,7 @@ const Resource = () => {
                       `}
                 >
                   <span
-                    className={`text-lg leading-none
+                    className={`text-[16px] lg:text-lg leading-none
                           ${
                             active === item.id
                               ? "text-white"
@@ -97,9 +97,9 @@ const Resource = () => {
         </div>
       </div>
 
-      <div className="w-full max-w-[65%] flex flex-col gap-4">
+      <div className="w-full md:max-w-[60%] lg:max-w-[65%] flex flex-col gap-4">
         {/* search */}
-        <div className="flex justify-end">
+        <div className="flex justify-end mb-5 md:mb-0">
           <div className="w-fit h-fit relative">
             <input
               type="text"
