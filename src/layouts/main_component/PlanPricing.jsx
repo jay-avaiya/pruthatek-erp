@@ -46,56 +46,64 @@ const PlanPricing = () => {
   ];
 
   return (
-    <div className="w-full px-24 font-inter">
+    <div className="w-full px-4 md:px-6 lg:px-12 xl:px-24 font-inter">
       {/* title */}
       <div>
-        <p className="text-[#F19623] text-[16px] font-semibold">
+        <p className="text-[#F19623] text-sm md:text-[16px] font-semibold">
           Pocket Friendly Pricing
         </p>
-        <h3 className="text-[40px] font-semibold text-[#282D30] mt-2 leading-[60px]">
+        <h3 className="text-2xl md:text-3xl lg:text-[40px] font-semibold text-[#282D30] mt-2 leading-[60px]">
           Select your Plan
         </h3>
       </div>
 
       {/* plan */}
-      <div className="w-full max-w-[1169px] mx-auto mt-24">
+      <div className="w-full max-w-[1169px] mx-auto lg:mt-20 xl:mt-24">
         {/* plan type */}
         <div className="w-full flex items-center justify-center gap-4">
-          <span className="text-lg font-semibold">Monthly</span>
+          <span className="text-sm md:text-lg font-semibold">Monthly</span>
 
           <button
             onClick={() => setYearly(!yearly)}
-            className={`w-12 h-6 flex items-center rounded-full p-1 transition-all duration-300 ${
+            className={`w-10 md:w-12 h-5 md:h-6 flex items-center rounded-full p-1 transition-all duration-300 ${
               yearly ? "bg-[#0faf87]" : "bg-[#D1D5DB]"
             }`}
           >
             <div
-              className={`w-4 h-4 bg-white rounded-full transition-transform duration-300 ${
+              className={`w-3 h-3 md:w-4 md:h-4 bg-white rounded-full transition-transform duration-300 ${
                 yearly ? "translate-x-6" : "translate-x-0"
               }`}
             />
           </button>
 
-          <span className="text-lg font-semibold">Yearly</span>
+          <span className="text-sm md:text-lg font-semibold">Yearly</span>
 
-          <span className="text-[#F19623] text-sm font-semibold">
+          <span className="text-[#F19623] text-xs md:text-sm font-semibold">
             {" "}
             20% off + 15 days free
           </span>
         </div>
 
         {/* plan includes */}
-        <div className="flex items-center justify-between px-6 py-3 mt-8 bg-[#efeeed] rounded-[10px]">
-          <h4 className="text-2xl font-semibold">All Plans Includes </h4>
+        <div className="flex flex-col md:flex-row items-center justify-center  md:justify-between px-3 md:px-6 py-3 mt-8 bg-[#efeeed] rounded-[10px] gap-y-5 md:gap-y-0">
+          <h4 className="text-xl lg:text-2xl font-semibold">
+            All Plans Includes{" "}
+          </h4>
 
           {/* multi-user */}
           <div className="flex items-center justify-center gap-2">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#FFF7F2]">
-              <img src="/user.png" alt="user" className="size-[30px]" />
+            <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center bg-[#FFF7F2]">
+              <img
+                src="/user.png"
+                alt="user"
+                className="size-6 lg:size-[30px]"
+              />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-semibold">MultiUsers</span>
-              <span className="text-[#A1A3B2] text-sm font-medium">
+              <span className="text-[16px] lg:text-lg font-semibold">
+                MultiUsers
+              </span>
+              <span className="text-[#A1A3B2] text-xs lg:text-sm font-medium">
                 for single firm
               </span>
             </div>
@@ -103,12 +111,18 @@ const PlanPricing = () => {
 
           {/* live support */}
           <div className="flex items-center justify-center gap-2">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#FFF7F2]">
-              <img src="/chats.png" alt="chats" className="size-[30px]" />
+            <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center bg-[#FFF7F2]">
+              <img
+                src="/chats.png"
+                alt="chats"
+                className="size-6 lg:size-[30px]"
+              />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-semibold">Live Support</span>
-              <span className="text-[#A1A3B2] text-sm font-medium">
+              <span className="text-[16px] lg:text-lg font-semibold">
+                Live Support
+              </span>
+              <span className="text-[#A1A3B2] text-xs lg:text-sm font-medium">
                 on Weekdays.
               </span>
             </div>
@@ -116,12 +130,14 @@ const PlanPricing = () => {
 
           {/* expert assist */}
           <div className="flex items-center justify-center gap-2">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#FFF7F2]">
-              <img src="/cog.png" alt="cog" className="size-[30px]" />
+            <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center bg-[#FFF7F2]">
+              <img src="/cog.png" alt="cog" className="size-6 lg:size-[30px]" />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-semibold">Expert Assist</span>
-              <span className="text-[#A1A3B2] text-sm font-medium">
+              <span className="text-[16px] lg:text-lg font-semibold">
+                Expert Assist
+              </span>
+              <span className="text-[#A1A3B2] text-xs lg:text-sm font-medium">
                 on Weekdays.
               </span>
             </div>
@@ -129,9 +145,9 @@ const PlanPricing = () => {
         </div>
 
         {/* plans cards */}
-        <div className="w-full flex justify-between mt-16">
+        <div className="w-full flex flex-col lg:flex-row items-center justify-between mt-16 gap-y-6 lg:gap-y-0">
           {/* plan 1 */}
-          <div className="w-[360px] h-[850px] bg-[#f7f4f4] rounded-[24px] px-6 py-8 flex flex-col">
+          <div className="w-[320px] xl:w-[360px] h-[850px] bg-[#f7f4f4] rounded-[24px] px-6 py-8 flex flex-col">
             {/* plan name & price */}
             <div>
               <h4 className="text-xl font-bold text-[#1B2A49]">Basic</h4>
@@ -167,7 +183,7 @@ const PlanPricing = () => {
           </div>
 
           {/* plan 2 */}
-          <div className="w-[360px] h-[850px] bg-[#FDFDFD] border-[3px] border-[#F19623] rounded-[24px] px-6 py-8 flex flex-col">
+          <div className="w-[320px] xl:w-[360px] h-[850px] bg-[#FDFDFD] border-[3px] border-[#F19623] rounded-[24px] px-6 py-8 flex flex-col">
             {/* plan name & price */}
             <div>
               <h4 className="text-xl font-bold text-[#F19623]">Standard</h4>
@@ -203,7 +219,7 @@ const PlanPricing = () => {
           </div>
 
           {/* plan 3 */}
-          <div className="relative w-[360px] h-[850px] border-[3px] border-[#008060] bg-[#008060] rounded-[24px] px-6 py-8 flex flex-col">
+          <div className="relative w-[320px] xl:w-[360px]  h-[850px] border-[3px] border-[#008060] bg-[#008060] rounded-[24px] px-6 py-8 flex flex-col">
             {/* Designs */}
             <div className="absolute left-0 top-0 -translate-y-1/3 -translate-x-1/3 w-[90px] h-[90px] rounded-full border-[21px] border-[#FDFDFD1A]"></div>
             <div className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2  w-[200px] h-[200px] rounded-full border-[51px] border-[#FDFDFD1A]"></div>
