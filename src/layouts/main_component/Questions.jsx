@@ -21,28 +21,30 @@ const Questions = () => {
   ];
 
   return (
-    <div className="w-full h-fit font-inter text-[#333333] px-24">
+    <div className="w-full h-fit font-inter text-[#333333] px-4 md:px-6 lg:px-12 xl:px-24">
       {/* title */}
       <div>
-        <h3 className="text-[40px] font-semibold">
+        <h3 className="text-2xl md:text-3xl lg:text-[40px] font-semibold">
           Frequently Asked Questions
         </h3>
       </div>
 
       {/* questions */}
-      <div className="w-full max-w-[890px] mx-auto mt-24 flex flex-col gap-8">
+      <div className="w-full max-w-[890px] mx-auto mt-24 flex flex-col gap-5 md:gap-8">
         {questions.map((que, index) => (
           <div key={index}>
-            <h4 className="text-2xl font-semibold">{que.que}</h4>
-            <p className="text-[16px] leading-[26px] mt-4">{que.ans}</p>
+            <h4 className="text-xl md:text-2xl font-semibold">{que.que}</h4>
+            <p className="text-sm md:text-[16px] leading-[26px] mt-4">
+              {que.ans}
+            </p>
           </div>
         ))}
 
         <div className="flex flex-col items-center text-center gap-8 mt-16">
-          <h3 className="text-[30px] font-bold text-[#282D30]">
+          <h3 className="text-xl md:text-[30px] font-bold text-[#282D30]">
             Are you looking For Paper less Solution for Hospital Records?
           </h3>
-          <p className="text-lg font-medium leading-[30px] text-[#A1A3B2]">
+          <p className="text-[16px] md:text-lg font-medium leading-[30px] text-[#A1A3B2]">
             The illustration above is for a 1000-bedded hospital. Results and
             metrics may vary from hospital to hospital depending on their
             specific bed count, patient load, and operational processes.
