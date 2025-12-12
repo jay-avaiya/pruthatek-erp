@@ -7,19 +7,19 @@ const Pricing = () => {
     <div className="flex flex-col items-center gap-28">
       <PlanPricing />
 
-      <div className="w-full flex flex-col gap-y-14 px-24 font-inter">
+      <div className="w-full flex flex-col gap-y-10 md:gap-y-14 px-4 md:px-6 lg:px-12 xl:px-24 font-inter">
         <div>
           <div>
-            <p className="text-[16px] text-[#F19623] font-semibold">
+            <p className="text-sm md:text-[16px] text-[#F19623] font-semibold">
               What Customers are saying
             </p>
-            <h3 className="text-[40px] text-[#282D30] font-semibold">
+            <h3 className="text-2xl md:text-3xl lg:text-[40px] text-[#282D30] font-semibold">
               Customer Reviews
             </h3>
           </div>
         </div>
 
-        <div className="grid grid-cols-3 place-items-center gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-10">
           <ReviewCard />
           <ReviewCard bg={"#36D7A0"} />
           <ReviewCard bg={"#F95484"} />
