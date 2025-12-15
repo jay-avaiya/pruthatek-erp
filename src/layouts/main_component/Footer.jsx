@@ -121,7 +121,7 @@ export default function Footer() {
         {/* LOGO + BOXES */}
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           {/* Logo */}
-          <div className="bg-[#333] w-[300px] h-[100px] lg:h-[120px] rounded-[20px] flex items-center justify-center">
+          <div className="bg-[#333] w-full max-w-[300px] h-[100px] lg:h-[120px] rounded-[20px] flex items-center justify-center">
             <Link to="/">
               <img
                 src="/Pruthatek.png"
@@ -227,6 +227,9 @@ export default function Footer() {
         <p className="text-sm text-center my-4">
           ©2025 PRUTHA TECHNOMARKET PVT. LTD. | PRUTHA TECHNOMARKET INC. All
           rights reserved.
+        </p>
+        <p className="text-[#F19623] text-xl lg:text-2xl font-semibold mb-4">
+          Made with ❤️ from Bharat
         </p>
       </div>
     </footer>

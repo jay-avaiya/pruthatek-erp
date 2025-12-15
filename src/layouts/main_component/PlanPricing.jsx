@@ -85,7 +85,7 @@ const PlanPricing = () => {
         </div>
 
         {/* plan includes */}
-        <div className="flex flex-col md:flex-row items-center justify-center  md:justify-between px-3 md:px-6 py-3 mt-8 bg-[#efeeed] rounded-[10px] gap-y-5 md:gap-y-0">
+        <div className="flex flex-col md:flex-row items-center justify-center  md:justify-between px-3 md:px-6 py-3 mt-8 rounded-[10px] gap-y-5 md:gap-y-0">
           <h4 className="text-xl lg:text-2xl font-semibold">
             All Plans Includes{" "}
           </h4>
@@ -145,9 +145,18 @@ const PlanPricing = () => {
         </div>
 
         {/* plans cards */}
-        <div className="w-full flex flex-col lg:flex-row items-center justify-between mt-16 gap-y-6 lg:gap-y-0">
+        <div
+          className="
+    w-full mt-16
+    grid grid-cols-1
+    md:grid-cols-2
+    lg:grid-cols-3
+    gap-6
+    place-items-center
+  "
+        >
           {/* plan 1 */}
-          <div className="w-[320px] xl:w-[360px] h-[850px] bg-[#f7f4f4] rounded-[24px] px-6 py-8 flex flex-col">
+          <div className="w-[320px] xl:w-[360px] h-[850px] bg-white rounded-[24px] px-6 py-8 flex flex-col">
             {/* plan name & price */}
             <div>
               <h4 className="text-xl font-bold text-[#1B2A49]">Basic</h4>

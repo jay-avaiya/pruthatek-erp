@@ -80,7 +80,7 @@ export default function Navbar() {
       )}
 
       <div
-        className={`fixed top-0 right-0 h-full w-full bg-white shadow-xl z-[9999] p-6 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-screen bg-white shadow-xl z-[9999] p-6 transform transition-transform duration-300 ease-in-out ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

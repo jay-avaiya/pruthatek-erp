@@ -82,7 +82,11 @@ const Home = () => {
         </h3>
 
         <div className="shadow-[0_4px_34px_0_rgba(120,120,120,0.25)] rounded-[20px] overflow-hidden">
-          <img src="/home.jpg" alt="home_image" />
+          <img
+            src="/home.jpg"
+            alt="home_image"
+            className="w-full max-w-full object-contain"
+          />
         </div>
       </div>
 
@@ -167,7 +171,7 @@ const Home = () => {
           {pms.map((pms, index) => (
             <div
               key={index}
-              className="shadow-[0_6px_18px_-4px_rgba(0,0,0,0.15)] border-8 border-white rounded-xl w-full max-w-[380px] h-[256px] space-y-4"
+              className="shadow-[0_6px_18px_-4px_rgba(0,0,0,0.15)] border-8 border-white rounded-xl w-full max-w-[380px] h-[256px] space-y-4 bg-white"
             >
               <div className="w-20 h-20 rounded-[10px] bg-[#FFF7F2] flex items-center justify-center">
                 {pms.icon}

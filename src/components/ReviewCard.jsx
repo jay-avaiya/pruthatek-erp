@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 
 const ReviewCard = ({ bg }) => {
   return (
-    <div className="w-full max-w-[297px] min-h-[327px] px-1 py-2 border-8 border-white rounded-[12px] shadow-[0_6px_18px_-4px_rgba(0,0,0,0.15)] flex flex-col gap-4">
+    <div className="w-full max-w-[297px] min-h-[327px] px-1 py-2 border-8 border-white rounded-[12px] shadow-[0_6px_18px_-4px_rgba(0,0,0,0.15)] flex flex-col gap-4 bg-white">
       {/* ---- user name ---- */}
       <div className="flex gap-2 items-center">
         <div
