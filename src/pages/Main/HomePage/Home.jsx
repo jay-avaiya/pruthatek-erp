@@ -70,7 +70,7 @@ const Home = () => {
           and modern business experience for both owners and accountants.
         </p>
 
-        <button className="text-white bg-[#FB8C5C] text-sm md:text-[16px] font-bold rounded-full py-3 px-14 cursor-pointer">
+        <button className="text-white bg-[#FB8C5C] text-sm md:text-[16px] font-bold rounded-full py-3 px-14 cursor-pointer active:scale-95 transition duration-100">
           Start 7 day free trial
         </button>
       </div>

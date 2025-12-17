@@ -14,7 +14,7 @@ const CardLeft = ({ title, description }) => {
           {description}
         </p>
 
-        <button className="font-bold text-[16px] text-white bg-[#F19623] py-3 px-12 rounded-xl cursor-pointer">
+        <button className="font-bold text-[16px] text-white bg-[#F19623] py-3 px-12 rounded-xl cursor-pointer active:scale-95 transition duration-100">
           Let's Start Now
         </button>
       </div>
@@ -33,7 +33,7 @@ const CardLeft = ({ title, description }) => {
           {description}
         </p>
 
-        <button className="font-bold text-[16px] text-white bg-[#F19623] py-3 px-12 rounded-xl cursor-pointer">
+        <button className="font-bold text-[16px] text-white bg-[#F19623] py-3 px-12 rounded-xl cursor-pointer active:scale-95 transition duration-100">
           Let's Start Now
         </button>
       </div>
