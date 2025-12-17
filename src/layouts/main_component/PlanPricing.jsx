@@ -46,7 +46,7 @@ const PlanPricing = () => {
   ];
 
   return (
-    <div className="w-full px-4 md:px-6 lg:px-12 xl:px-24 font-inter">
+    <div className="w-full px-4 md:px-6 lg:px-12 xl:px-24 font-inter overflow-x-hidden">
       {/* title */}
       <div>
         <p className="text-[#F19623] text-sm md:text-[16px] font-semibold">

@@ -15,8 +15,3 @@
 .blog-pagination .swiper-pagination-bullet-active {
   background-color: #008060; /* your active color */
 }
-
-html,
-body {
-  overflow-x: hidden;
-}
