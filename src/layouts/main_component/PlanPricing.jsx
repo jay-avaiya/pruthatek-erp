@@ -185,7 +185,7 @@ const PlanPricing = () => {
             </div>
 
             <div className="flex mt-auto">
-              <button className="w-full text-white font-bold text-[16px] bg-[#1B2A49] py-3 rounded-[14px] cursor-pointer">
+              <button className="w-full text-white font-bold text-[16px] bg-[#1B2A49] py-3 rounded-[14px] cursor-pointer active:scale-95 transition duration-100">
                 Let's Start
               </button>
             </div>
@@ -221,7 +221,7 @@ const PlanPricing = () => {
             </div>
 
             <div className="flex mt-auto">
-              <button className="w-full text-white font-bold text-[16px] bg-[#F19623] py-3 rounded-[14px] cursor-pointer">
+              <button className="w-full text-white font-bold text-[16px] bg-[#F19623] py-3 rounded-[14px] cursor-pointer active:scale-95 transition duration-100">
                 Let's Start
               </button>
             </div>
@@ -267,7 +267,7 @@ const PlanPricing = () => {
             </div>
 
             <div className="flex mt-auto">
-              <button className="w-full text-black font-bold text-[16px] bg-[#FDFDFD] py-3 rounded-[14px] cursor-pointer z-10">
+              <button className="w-full text-black font-bold text-[16px] bg-[#FDFDFD] py-3 rounded-[14px] cursor-pointer z-10 active:scale-95 transition duration-100">
                 Let's Start
               </button>
             </div>
